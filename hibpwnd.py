@@ -1,3 +1,4 @@
+import getpass
 import requests
 import hashlib
 import json
@@ -78,7 +79,8 @@ if __name__ == "__main__":
     else:
         #if option is not set
         #get input and check pw
-        password = input("Please type password to check:")
+        password = getpass.getpass(prompt='Password: ', stream=None)
+        #password = input("Please type password to check:")
 
 
     #check password
